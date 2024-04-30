@@ -1,0 +1,15 @@
+- name: Installing Nginx
+  hosts: web
+  become: yes #this acts like a sudo user
+  tasks: 
+  - name: Installing Nginx
+    ansible.bulitin.dnf:
+      name: isntall Nginx
+      state: installed
+
+  - name: Starting & Enabling Nginx
+    ansible.builtin.service:
+      name: starting the Nginx
+      state: started
+      enabled: yes # this is for enabling the server
+      
