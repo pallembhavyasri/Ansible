@@ -1,0 +1,9 @@
+- name: Taking variables from files #if there are so many variables we can declare all so we maintain a file and access it here
+  hosts: localhost
+  vars_files: # this is the declaration to check in files
+  - Variablefiles.yaml
+  tasks:
+    - name: To take variables from files 
+      ansible.builtin.debug:
+        msg: "Hi I am learning {{course}} from {{trainer}}"
+        

@@ -4,14 +4,14 @@
     course: "Ansible"
     trainer: "Siva"
   tasks:
-    - name: Tasks variables accessing
+    - name: Tasks variables accessing #module-1
       vars: # local variables or tasks variables
         course: "Devops with AWS"
         trainer: "Siva"
       ansible.builtin.debug:
         msg: "Hi I am learning {{course}} from {{trainer}}"
         
-    - name: Playbook variables accessing
+    - name: Playbook variables accessing #module-2
       ansible.builtin.debug:
         msg: "Hi I am learning {{course}} from {{trainer}}"
 
