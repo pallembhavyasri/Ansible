@@ -1,0 +1,17 @@
+- name: Types of variables
+  hosts: localhost
+  vars: # global variables or playbook variables
+    course: "Ansible"
+    trainer: "Siva"
+  tasks:
+    - name: Tasks variables accessing
+      vars: # local variables or tasks variables
+        course: "Devops with AWS"
+        trainer: "Siva"
+      ansible.builtin.debug:
+        msg: "Hi I am learning {{course}} from {{trainer}}"
+        
+    - name: Playbook variables accessing
+      ansible.builtin.debug:
+        msg: "Hi I am learning {{course}} from {{trainer}}"
+
