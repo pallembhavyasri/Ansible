@@ -2,7 +2,5 @@
   hosts: localhost
   tasks:
     - name: Inventory variables
-      vars:
-        course: "Ansible"
       ansible.builtin.debug:
         msg: "Hi I am learning {{course}} from {{trainer}}"

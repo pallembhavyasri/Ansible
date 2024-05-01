@@ -1,0 +1,7 @@
+- name: Accessing variables as arguments 
+  hosts: localhost
+  tasks:
+    - name: Argument variables # to access these we need to pass -e "Arguments" with command prompt
+      ansible.builtin.debug:
+        msg: "Hi {{person}} good morning"
+        
