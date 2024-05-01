@@ -1,0 +1,5 @@
+- name: Checking the priority of variables
+  hosts: localhost
+  vars:
+    Variable: "Taking from playbook level"
+    
