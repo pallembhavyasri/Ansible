@@ -1,0 +1,14 @@
+- name: Playbook1
+  hosts: localhost
+  tasks:
+  - name: Module in playbook1
+    ansible.builtin.debug:
+      msg: "Hi from play book 1"
+
+- name: Playbook2 
+  hosts: localhost 
+  tasks:
+  - name: Module in playbbok2
+    ansible.builtin.debug:
+      msg: "Hello from pay book 2"
+
