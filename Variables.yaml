@@ -1,0 +1,11 @@
+- name: Declaring variables in Ansible 
+  hosts: localhost
+  vars: # to declare the variable in ansible
+    course: "Ansible"
+    trainer: "Siva"
+    duration: "120hrs"
+  tasks:
+    - name: Accessing the variables
+      ansible.builtin.debug:
+        msg: "Hi I am learning {{course}} from {{trainer}} for {{duration}}"
+        
