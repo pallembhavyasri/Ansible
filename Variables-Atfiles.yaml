@@ -5,6 +5,6 @@
   tasks:
     - name: To take variables from files 
       vars: 
-        duration: "120 hours"
+        duration: "120 hours" # task level variable
       ansible.builtin.debug:
         msg: "Hi I am learning {{course}} from {{trainer}} for {{duration}}"
