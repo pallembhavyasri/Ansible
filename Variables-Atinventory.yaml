@@ -1,6 +1,6 @@
 - name: Accessing the variables at inventory level #if no var is decalaried at any where ansible will check in inventory
   hosts: localhost
   tasks:
-  - name: Inventory variables
-    ansible.builtin.debug:
-      msg: "Hi I am learning {{course}} from {{trainer}}"
+    - name: Inventory variables
+      ansible.builtin.debug:
+        msg: "Hi I am learning {{course}} from {{trainer}}"
