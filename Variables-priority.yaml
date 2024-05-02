@@ -14,3 +14,14 @@
       Variable: "Value from task level"
     ansible.builtin.debug:
       msg: "Hi Taken {{Variable}}"
+
+
+#Priority level:
+#1. Arguments level
+#2. task level
+#3. Files level
+#4. Prompt level
+#5. Playbook level 
+#6. Inventory level
+
+
