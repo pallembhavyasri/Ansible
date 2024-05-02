@@ -1,5 +1,16 @@
 - name: Checking the priority of variables
   hosts: localhost
-  vars:
-    Variable: "Taking from playbook level"
-    
+  vars: #playbook variable declaration
+    Variable: "Value from playbook level"
+  vars_files: #variable at file level
+  - Variablefiles.yaml
+  vars_prompt: #variable at prompt level 
+    - name: Variable
+      prompt: "Please enter prompt variable"
+      private: true
+  tasks:
+  - name: Accessing value from task level
+    vars: #variables at task level 
+      Variable: "Value from task level"
+    ansible.builtin.debug:
+      msg: "Hi Taken {{Variable}}"
