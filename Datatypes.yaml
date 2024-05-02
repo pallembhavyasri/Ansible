@@ -1,0 +1,19 @@
+- name: Data types in Ansible
+  hosts: localhost
+  vars:
+    Variable1: "This is string data types" #string variable
+    Variable2: #List variables
+    - list1
+    - list2  
+    - list3
+    Variable3: #map or dictory
+      type1: hi 
+      type2: hello 
+      type3: Namaste
+    Variable4: true
+  tasks:
+    - name: Printing data types
+      ansible.builtin.debug:
+        msg: "Print String {{Variable1}}, List {{Variable2}}, Map {{Variable3}}, Boolean {{Variable4}}"
+
+        
